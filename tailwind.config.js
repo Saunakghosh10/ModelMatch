@@ -1,9 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
+      fontFamily: {
+        'clash-display': ['Clash Display', 'sans-serif'],
+        'clash-grotesk': ['Clash Grotesk', 'sans-serif'],
+      },
       colors: {
+        primary: {
+          DEFAULT: '#0A0B1F',
+          dark: '#070814',
+        },
         gray: {
           "100": "#fafafa",
           "200": "#141416",
@@ -27,13 +37,6 @@ module.exports = {
         "container-gap": "10px",
         "button-size": "36px",
         "button-icon-size": "16px",
-      },
-      fontFamily: {
-        "caption-regular": "Inter",
-        "clash-display": "'Clash Display'",
-        "clash-grotesk": "'Clash Grotesk'",
-        "clash-display-variable": "'Clash Display Variable'",
-        inherit: "inherit",
       },
       borderRadius: {
         "13xl": "32px",
@@ -77,7 +80,5 @@ module.exports = {
       },
     },
   },
-  corePlugins: {
-    preflight: false,
-  },
+  plugins: [],
 };
